@@ -19,3 +19,17 @@ header {
     background-color: #684747;
     padding: 30px;
 }
+
+footer {
+    text-align: center;
+    margin: 30px;
+    padding: 15px;
+    font-weight: bold;
+    background-color: #121212;
+    border-radius: 5px;
+    display: flex;
+    align-content: center;
+    flex-direction: column;
+    flex: auto;
+    color: white;
+}
