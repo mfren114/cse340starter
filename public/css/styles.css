@@ -8,7 +8,7 @@ body {
     margin: 0;
     padding: 0;
     background-color: #f5f5f5;
-    
+    background-image: url("images/site/own_today.png");
 }
 
 header {
@@ -16,13 +16,13 @@ header {
     flex-wrap: wrap;
     gap: 10px;
     justify-content: center;
-    color: #ffffff;
-    background-color: #945c12;
+    color: black;
+    background-color: #f5f5f5;
     padding: 30px;
 }
 
 header a {
-    color: #ffffff;
+    color: black;
     text-decoration: none;
     font-size: larger;
     font-weight: bold;
@@ -30,12 +30,12 @@ header a {
 }
 
 nav {
-    background-color: #f5f5f5;
+    background-color: #054d7e;
     padding: 5px;
 }
 
 nav ul {
-    color: black;
+    color: #ffffff;
     text-decoration: none;
     padding: .5rem;
     width: auto;
@@ -47,8 +47,9 @@ nav ul {
     gap: 30px;
 }
 
-nav  ul a:hover {
-    background-color: #333303;
+nav  li:hover {
+    background-color: #207be2;
+    border-radius: 5px;
 }
 
 h1 {
@@ -59,7 +60,64 @@ h1 {
     max-width: 1000px;
     margin: 0 auto;
     padding: 10px;
-    height: 67vh;
+    height: 6vh;
+}
+
+img  {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: left;
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 10px;
+    height: 40vh;
+}
+
+.h2-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: left;
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 10px;
+    gap: 250px;
+}
+
+.h3-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: left;
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 10px;
+    gap: 100px;
+}
+
+.upgrades-img {
+   display: grid;
+    grid-template-columns: 1fr 1fr;
+    background-color: #054d7e;
+}
+
+figcaption {
+    color: #ffffff;
+    font-size: x-small;
+    padding: 1px;
+    margin: 1px;
+}
+
+.h3-container p {
+    padding: 10px;
+    margin: 5px;
+    font-size: medium;
+    font-weight: bolder;
+}
+
+#upgrades {
+    height: 100px;
+    width: 100px;
+    background-color: #054d7e;
+    
 }
 
 footer {
