@@ -171,8 +171,16 @@ footer {
 @media screen and (max-width: 65rem){
     body {
         display: grid;
-        grid-template-columns: 1fr 1fr;
+        grid-template-columns: 1fr;
         place-items: center;
+    }
+
+    .delorean {
+        margin-inline-start: 100px;
+    }
+
+    .h3-container {
+        gap: 10px;
     }
 }
 
@@ -182,4 +190,31 @@ footer {
         grid-template-columns: 1fr;
         place-items: center;
     }
+
+    header {
+        width: 510px;
+    }
+
+    nav {
+        width: 510px;
+    }
+
+    .delorean {
+        margin-inline-start: 50px;
+    }
+
+    img {
+        width: 500px;
+        height: 400px;
+    }
+
+    footer {
+        width: 450px;
+    }
+
+    .h2-container {
+        width: 550px;
+        row-gap: 1px;
+    }
+
 }
