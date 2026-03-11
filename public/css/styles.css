@@ -147,7 +147,7 @@ figcaption {
     font-weight: bolder;
 }
 
-#upgrades {
+#upgrades1, #upgrades2, #upgrades3, #upgrades4 {
     height: 100px;
     width: 100px;
     background-color: #054d7e;
