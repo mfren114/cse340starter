@@ -1,4 +1,4 @@
-const utilities = require("C:/Users/mfrenette/OneDrive - Tesla/Desktop/CSE 340/utilities")
+const utilities = require("../utilities/")
 const baseController = {}
 
 baseController.buildHome = async function(req, res){
