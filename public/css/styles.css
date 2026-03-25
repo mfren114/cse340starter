@@ -51,6 +51,11 @@ nav ul {
     gap: 30px;
 }
 
+nav li a {
+    color: #ffffff;
+    text-decoration: none;
+}
+
 nav  li:hover {
     background-color: #207be2;
     border-radius: 5px;
