@@ -3,19 +3,20 @@
 <form action="/account/register" method="post">
     <div>
         <label for="fname">First Name</label>
-        <input type="text" name="fname" id="fname">
+        <input type="text" name="fname" id="fname" required>
     </div>
     <div>
         <label for="lname">Last Name</label>
-        <input type="text" name="lname" id="lname">
+        <input type="text" name="lname" id="lname" required>
     </div>
     <div>
         <label for="email">Email</label>
-        <input type="text" email="email" id="email">
+        <input type="email" email="email" id="email" required>
     </div>
     <div>
         <label for="pwd">Password</label>
-        <input type="password" name="password" id="pwd">
+        <span>(Passwords must be at least 12 characters and contain at least 1 number, 1 capital letter and 1 special character)</span>
+        <input type="password" name="password" id="pwd" required pattern="^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[^a-zA-Z0-9])(?!.*\s).{12,}$">
     </div>
     <div>
         <button type="submit">Register</button>

@@ -17,6 +17,8 @@ const session = require("express-session")
 const pool = require("./database")
 const accountRoute = require("./routes/accountRoute")
 const bodyParser = require("body-parser")
+const detailsRoute = require("./routes/detailsProductRoute")
+const detailsController = require("./controllers/detailController")
 
 /* ***********************
  * Middleware
@@ -60,6 +62,9 @@ app.use("/inv", inventoryRoute)
 
 // Account Route
 app.use("/account", accountRoute)
+
+// Details route
+app.use("/inv", detailsRoute)
 
 /* ***********************
  * Local Server Information
