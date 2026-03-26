@@ -1,4 +1,4 @@
-const invModel = require("C:/Users/mfrenette/OneDrive - Tesla/Desktop/CSE 340/cse340starter/models/inventory-model.js")
+const invModel = require("../models/inventory-model.js")
 const Util = {}
 
 /* ************************
