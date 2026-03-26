@@ -1,9 +1,5 @@
-const pool = require("../database/")
+const pool = require("../database")
 
-
-/* ***************************
- *  Get details products items by inv_id
- * ************************** */
 async function getInventoryDetailsById(inv_id) {
   try {
     const data = await pool.query(

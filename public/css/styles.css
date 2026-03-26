@@ -190,6 +190,25 @@ Form Button {
     color: #ffffff;
 }
 
+#inv-display {
+    justify-content: left;
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 10px;
+}
+
+div .namePrice a{
+    color: #121212;
+    text-decoration: none;
+}
+
+div .detailsView {
+    justify-content: left;
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 10px;
+}
+
 
 @media screen and (max-width: 65rem){
     body {
@@ -205,6 +224,12 @@ Form Button {
     .s1-container {
         gap: 10px;
     }
+
+    .detailsView img {
+        width: 600px;
+        height: 300px;
+    }
+    
 }
 
 @media screen and (max-width: 35rem){
@@ -238,6 +263,15 @@ Form Button {
     .h2-container {
         width: 550px;
         row-gap: 1px;
+    }
+
+    nav ul {
+        gap: 15px;
+    }
+
+    .detailsView img {
+        width: 400px;
+        height: 200px;
     }
 
 }
