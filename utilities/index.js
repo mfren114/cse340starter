@@ -64,11 +64,12 @@ Util.buildDetailsView = async function (data) {
   let grid
   if (data.length > 0) {
     data.forEach(vehicle => {
-      grid = '<div class="detailsView">'
+      grid =  '<div class="detailsView">'
       grid += '<img src="' + vehicle.inv_image + '" alt="Image of ' + vehicle.inv_make + ' ' + vehicle.inv_model + ' on CSE Motors" />'
+      grid += '</div>'
       grid += '<div class="details">'
-      grid += '<h3>' + vehicle.inv_make + ' ' + vehicle.inv_model + '</h3>'
-      grid += '<h4>Price:$' + new Intl.NumberFormat('en-US').format(vehicle.inv_price) + '</h4>';
+      grid += '<h2>' + vehicle.inv_make + ' ' + vehicle.inv_model + '</h2>'
+      grid += '<h3>Price:$' + new Intl.NumberFormat('en-US').format(vehicle.inv_price) + '</h3>';
       grid += '<strong>Description: </strong>';
       grid += '<span>' + vehicle.inv_description + '</span>';
       grid += '<br />'
@@ -79,6 +80,7 @@ Util.buildDetailsView = async function (data) {
       grid += '<br />'
       grid += '<strong>Miles: </strong>';
       grid += '<span> ' + new Intl.NumberFormat('en-US').format(vehicle.inv_miles) + '</span>'
+      grid += '</div>'
     })
   } else {
     grid += '<p class="notice">vehicles could not be found.</p>'

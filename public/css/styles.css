@@ -209,6 +209,13 @@ div .detailsView {
     padding: 10px;
 }
 
+div .details {
+    justify-content: left;
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 10px;
+}
+
 
 @media screen and (max-width: 65rem){
     body {
