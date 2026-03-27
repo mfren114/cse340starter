@@ -216,6 +216,9 @@ div .details {
     padding: 10px;
 }
 
+.button-link {
+    color: orange;
+}
 
 @media screen and (max-width: 65rem){
     body {
