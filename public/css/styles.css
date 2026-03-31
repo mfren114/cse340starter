@@ -220,6 +220,26 @@ div .details {
     color: orange;
 }
 
+div #manage-container{
+    justify-content: left;
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 10px;
+    height: 60vh;
+}
+
+div li #add-new{
+    color: #121212;
+    text-decoration: none;
+    text-shadow: 2px 2px 4px #054d7e;
+    font-weight: bold;
+    
+}
+
+div li {
+    list-style-type: none;
+}
+
 @media screen and (max-width: 65rem){
     body {
         display: grid;

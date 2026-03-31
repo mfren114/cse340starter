@@ -19,6 +19,7 @@ const accountRoute = require("./routes/accountRoute")
 const bodyParser = require("body-parser")
 const detailsRoute = require("./routes/detailsProductRoute")
 const detailsController = require("./controllers/detailController")
+const manageRoute = require("./routes/manageRoute")
 
 /* ***********************
  * Middleware
@@ -65,6 +66,9 @@ app.use("/account", accountRoute)
 
 // Details route
 app.use("/inv", detailsRoute)
+
+// Manage Route
+app.use("/inv", manageRoute)
 
 /* ***********************
  * Local Server Information

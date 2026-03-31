@@ -88,4 +88,19 @@ Util.buildDetailsView = async function (data) {
   return grid
 }
 
-module.exports = Util
+Util.buildManagementView = async function (data) {
+  let grid
+  grid =  '<div id="manage-container">'
+  grid += '<li>'
+  grid += '<a href="/inv/add-classification" id="add-new" title="Add a new classification">' + 'Add New Classification' + '</a>'
+  grid += '</li>'
+  grid += '<br />'
+  grid += '<br />'
+  grid += '<li>'
+  grid += '<a href="/inv/add-vehicle" id="add-new" title="Add a new vehicle">' + 'Add New Vehicle' + '</a>'
+  grid += '</li>'
+  grid += '</div>'
+  return grid
+}
+
+module.exports = Util 
