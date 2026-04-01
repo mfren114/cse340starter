@@ -179,7 +179,7 @@ form {
     max-width: 1000px;
     margin: 0 auto;
     padding: 10px;
-    height: 60vh;
+    height: 65vh;
 }
 
 form input {
@@ -238,6 +238,32 @@ div li #add-new{
 
 div li {
     list-style-type: none;
+}
+
+fieldset {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 600px;
+    font-weight: bold;
+    background-color: #ffffff;
+}
+
+form span  {
+    font-style: italic;
+    font-weight: lighter;
+    font-size: small;
+}
+
+fieldset h2 {
+    font-size: small;
+    font-style: italic;
+}
+
+input::placeholder {
+  color: gray;
+  font-style: italic;
+  opacity: 1; 
 }
 
 @media screen and (max-width: 65rem){

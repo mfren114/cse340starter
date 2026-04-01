@@ -1,0 +1,28 @@
+<h1>Add New Inventory</h1>
+
+<% messages() %>
+
+<form id="classInventory" action="/inv/add-inventory">
+    <fieldset id="addInventory">
+        <h2>All Fields Required</h2>
+        <label for="make">Make</label>
+        <input type="text" name="inv_make" required>
+        <label for="make">Model</label>
+        <input type="text" name="inv_model" required>
+        <label for="make">Year</label>
+        <input type="number" name="inv_year"  pattern="\d{4}" required placeholder="4 digit year">
+        <label for="make">Description</label>
+        <input type="textarea" name="inv_description" required rows="3">
+        <label for="make">Image</label>
+        <input type="text" name="inv-image" required>
+        <label for="make">Thumbnail</label>
+        <input type="text" name="inv-thumbnail required ">
+        <label for="make">Price</label>
+        <input type="number" name="inv-price" required placeholder="whole number">
+        <label for="make">Miles</label>
+        <input type="number" name="inv-miles" required placeholder="no commas">
+        <label for="make">Color</label>
+        <input type="text" name="inv-color" required>
+        <button type="submit">Add Vehicle</button>
+    </fieldset>
+</form>

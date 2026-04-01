@@ -97,7 +97,7 @@ Util.buildManagementView = async function (data) {
   grid += '<br />'
   grid += '<br />'
   grid += '<li>'
-  grid += '<a href="/inv/add-vehicle" id="add-new" title="Add a new vehicle">' + 'Add New Vehicle' + '</a>'
+  grid += '<a href="/inv/add-inventory" id="add-new" title="Add a new Inventory">' + 'Add New Inventory' + '</a>'
   grid += '</li>'
   grid += '</div>'
   return grid
