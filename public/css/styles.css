@@ -228,7 +228,7 @@ div #manage-container{
     height: 60vh;
 }
 
-div li #add-new{
+div li #add-new, #add-new2{
     color: #121212;
     text-decoration: none;
     text-shadow: 2px 2px 4px #054d7e;
