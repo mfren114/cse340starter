@@ -1,6 +1,13 @@
 <h1>Add New Inventory</h1>
 
 <% messages() %>
+<% if (errors) { %>
+  <ul class="notice">
+    <% errors.array().forEach(error => { %>
+      <li><%= error.msg %></li>
+    <% }) %>
+  </ul>
+<% } %>
 
 <form id="classInventory" action="/inv/add-inventory">
     <fieldset id="addInventory">
