@@ -52,7 +52,7 @@ invCont.addClassification = async function (req, res, next) {
 
   const regResult = invModel.addClassification(classification_name)
 
-  if (regResult.rowcount > 0) {
+  if (regResult.rowCount > 0) {
     nav = await utilities.getNav()
     req.flash("notice", `Classification "${classification_name}" successfully added`)
     res.status(201).render("inventory/management", {
@@ -90,10 +90,10 @@ invCont.addInventory = async function (req, res, next) {
     classification_id
   )
 
-  if (regResult.rowcount > 0) {
+  if (regResult.rowCount > 0) {
     req.flash("notice", `Vehicle "${inv_make} ${inv_model}" added successfully`)
     res.status(201).render("inventory/management", {
-    title: "inventory Management",
+    title: "Inventory Management",
     nav,
     grid: await utilities.buildManagementView(),
     errors: null

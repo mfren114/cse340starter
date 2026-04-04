@@ -1,5 +1,6 @@
 const invModel = require('../models/inventory-model')
 const { body, validationResult } = require("express-validator")
+const utilities = require("../utilities/")
 const validate = {}
 
 /* **********************************
@@ -10,7 +11,6 @@ const validate = {}
         body("classification-name")
         .trim()
         .notEmpty()
-        .withMessage("Please provide classification name")
         .matches(/[a-zA-Z0-9]+/)
         .withMessage("Classification name cannot contain spaces or special characters"),
     ]
@@ -69,7 +69,6 @@ const validate = {}
         body("inv_color")
         .trim()
         .notEmpty()
-        .escape()
         .withMessage("Please provide vehicle color"),
 
         body("classificatio_id")
@@ -110,9 +109,9 @@ validate.checkInventory = async (req, res, next) => {
   utilities = require("./index")
   nav = await utilities.getNav()
   const classificationList = await utilities.buildClassificationList(req.body.classification_id)
-  return res.render("inventory/add-vehicle", {
+  return res.render("inventory/add-inventory", {
     errors,
-    title: "Add Vehicle",
+    title: "Add Inventory",
     nav,
     classificationList,
     inv_make: req.body.inv_make,

@@ -261,7 +261,7 @@ fieldset h2 {
 }
 
 input::placeholder {
-  color: gray;
+  color: rgb(56, 52, 52);
   font-style: italic;
   opacity: 1; 
 }
@@ -273,6 +273,15 @@ input::placeholder {
     flex-wrap: wrap;
     justify-content: center;
     max-width: 1000px;
+}
+
+input:invalid:not(:placeholder-shown) {
+  background-color:rgb(233, 117, 117);
+  
+}
+input:valid:not(:placeholder-shown) {
+  background-color:rgb(80, 155, 80);
+  
 }
 
 @media screen and (max-width: 65rem){

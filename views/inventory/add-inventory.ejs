@@ -3,7 +3,7 @@
 <% messages() %>
 <% if (errors) { %>
   <ul class="notice">
-    <% errors.array().forEach(error => { %>
+    <% errors.forEach(error => { %>
       <li><%= error.msg %></li>
     <% }) %>
   </ul>
@@ -13,23 +13,23 @@
     <fieldset id="addInventory">
         <h2>All Fields Required</h2>
         <label>Make</label>
-        <input type="text" name="inv_make" required>
+        <input type="text" name="inv_make" required placeholder="Make">
         <label>Model</label>
-        <input type="text" name="inv_model" required>
+        <input type="text" name="inv_model" required placeholder="Model">
         <label>Year</label>
         <input type="text" name="inv_year"  pattern="\d{4}" required placeholder="4 digit year">
         <label>Description</label>
-        <input type="text" name="inv_description" required>
+        <input type="text" name="inv_description" required placeholder="Describe Condition">
         <label>Image</label>
-        <input type="text" name="inv-image" required>
+        <input type="text" name="inv_image" required placeholder="Vehicle Image">
         <label>Thumbnail</label>
-        <input type="text" name="inv-thumbnail required ">
+        <input type="text" name="inv_thumbnail required " placeholder="Picture Thumbnail">
         <label>Price</label>
-        <input type="number" name="inv-price" required placeholder="whole number">
+        <input type="number" name="inv_price" required placeholder="whole number" >
         <label>Miles</label>
-        <input type="number" name="inv-miles" required placeholder="no commas">
+        <input type="number" name="inv_miles" required placeholder="no commas">
         <label>Color</label>
-        <input type="text" name="inv-color" required>
+        <input type="text" name="inv-color" required placeholder="Vehicle Color">
         <button type="submit">Add Vehicle</button>
     </fieldset>
 </form>
