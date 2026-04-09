@@ -11,7 +11,7 @@ const validate = {}
         body("classification-name")
         .trim()
         .notEmpty()
-        .matches(/[a-zA-Z0-9]+/)
+        .matches(/^[a-zA-Z0-9]+$/)
         .withMessage("Classification name cannot contain spaces or special characters"),
     ]
  }
@@ -83,12 +83,11 @@ const validate = {}
   * Check Classification Data
   * ************************* */
 validate.checkClassification = (req, res, next) => {
-  const { errors } = validationResult(req)
+  const errors = validationResult(req).array()
   if (!errors.length) {
     return next()
   }
   let nav
-  utilities = require("./index")
   nav = utilities.getNav()
   return res.render("inventory/add-classification", {
     errors,
@@ -96,6 +95,8 @@ validate.checkClassification = (req, res, next) => {
     nav,
   })
 }
+
+
 
 /* **************************
   * Check Inventory Data

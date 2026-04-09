@@ -12,7 +12,7 @@ router.get("/add-classification", invController.buildAddClassificationView);
 router.get("/add-inventory", invController.buildAddInventoryView);
 
 //Add new Classification
-router.post("/add-classification", validate.classificationRules(), validate.checkClassification, utilities.handleErrors(invController.addclassification));
+router.post("/add-classification", validate.classificationRules(), validate.checkClassification, utilities.handleErrors(invController.addClassification));
 
 router.post("/add-inventory", validate.inventoryRules(), validate.checkInventory, utilities.handleErrors(invController.addInventory));
 

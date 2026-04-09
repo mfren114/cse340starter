@@ -225,7 +225,7 @@ div #manage-container{
     max-width: 1000px;
     margin: 0 auto;
     padding: 10px;
-    height: 60vh;
+    height: 20vh;
 }
 
 div li #add-new, #add-new2{
@@ -277,11 +277,28 @@ input::placeholder {
 
 input:invalid:not(:placeholder-shown) {
   background-color:rgb(233, 117, 117);
-  
 }
 input:valid:not(:placeholder-shown) {
   background-color:rgb(80, 155, 80);
-  
+}
+
+h2 {
+    justify-content: left;
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 10px;
+    color: #121212;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.man-inv-p {
+    justify-content: left;
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 10px;
+    color: #121212;
+    height: 30vh;
 }
 
 @media screen and (max-width: 65rem){

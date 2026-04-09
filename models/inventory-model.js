@@ -23,7 +23,7 @@ async function getInventoryByClassificationId(classification_id) {
  *  Add new classification
  * ************************** */
 
-async function addClassification(claasification_name){
+async function addClassification(classification_name){
 try {
   const sql= "INSERT INTO public.classification (classification_name) VALUES ($1) RETURNING *"
     return await pool.query(sql, [classification_name])

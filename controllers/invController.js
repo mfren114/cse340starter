@@ -47,25 +47,30 @@ invCont.buildAddInventoryView = async function (req, res, next) {
 *  Process add classification
 * *************************************** */
 invCont.addClassification = async function (req, res, next) {
-  const {classification_name} = req.body 
+  const { classification_name } = req.body
   let nav = await utilities.getNav()
-
-  const regResult = invModel.addClassification(classification_name)
-
+ 
+  const regResult = await invModel.addClassification(classification_name)
+ 
   if (regResult.rowCount > 0) {
+    // Get updated nav with new classification
     nav = await utilities.getNav()
-    req.flash("notice", `Classification "${classification_name}" successfully added`)
+    const classificationSelect = await utilities.buildClassificationList()
+    req.flash("notice", `Classification "${classification_name}" successfully added.`)
     res.status(201).render("inventory/management", {
       title: "Inventory Management",
       nav,
-      grid: await utilities.buildManagementView(), 
+      grid: await utilities.buildManagementView(),
+      classificationSelect: classificationSelect,
+ 
       errors: null
     })
   } else {
-    req.flash("Notice", "Adding classification failed")
-    res.status(501).render("invemtory/add-classification", {
-      title: "Add Classification",nav,
-      erros: null
+    req.flash("notice", "Sorry, adding the classification failed.")
+    res.status(501).render("inventory/add-classification", {
+      title: "Add Classification",
+      nav,
+      errors: null
     })
   }
 }
@@ -118,6 +123,19 @@ invCont.addInventory = async function (req, res, next) {
       errors: null
     })
   }
+}
+
+invCont.buildManagementView = async function (req, res, next){
+  let nav = await utilities.getNav()
+  const classificationSelect = await utilities.buildClassificationList()
+  const grid = await utilities.buildManagementView()
+  res.render("./inventory/management", {
+    title: "Inventory Management",
+    nav,
+    grid,
+    classificationSelect,
+    errors:null
+  })
 }
 
 module.exports = invCont
