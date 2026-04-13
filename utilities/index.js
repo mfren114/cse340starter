@@ -155,7 +155,7 @@ Util.checkJWTToken = (req, res, next) => {
   let data = await invModel.getClassifications()
   let classificationList = '<select name="classification_id" id="classificationList" required>'
   classificationList += "<option value=''>Choose a Classification</option>"
-  data.rows.froeach((row) => {
+  data.rows.forEach((row) => {
     classificationList += '<option value="' + row.classification_id + '"'
     if (
       classification_id != null &&

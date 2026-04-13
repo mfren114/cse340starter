@@ -9,27 +9,29 @@
   </ul>
 <% } %>
 
-<form id="classInventory" action="/inv/add-inventory">
+<form id="classInventory" action="/inv/add-inventory" method="post">
     <fieldset id="addInventory">
         <h2>All Fields Required</h2>
-        <label>Make</label>
-        <input type="text" name="inv_make" required placeholder="Make">
-        <label>Model</label>
-        <input type="text" name="inv_model" required placeholder="Model">
-        <label>Year</label>
-        <input type="text" name="inv_year"  pattern="\d{4}" required placeholder="4 digit year">
-        <label>Description</label>
-        <input type="text" name="inv_description" required placeholder="Describe Condition">
-        <label>Image</label>
-        <input type="text" name="inv_image" required placeholder="Vehicle Image">
-        <label>Thumbnail</label>
-        <input type="text" name="inv_thumbnail required " placeholder="Picture Thumbnail">
-        <label>Price</label>
-        <input type="number" name="inv_price" required placeholder="whole number" >
-        <label>Miles</label>
-        <input type="number" name="inv_miles" required placeholder="no commas">
-        <label>Color</label>
-        <input type="text" name="inv-color" required placeholder="Vehicle Color">
+        <label for="inv_make">Make</label>
+        <input type="text" id="inv_make" name="inv_make" required placeholder="Make">
+        <label for="inv_model">Model</label>
+        <input type="text" id="inv_model" name="inv_model" required placeholder="Model">
+        <label for="inv_year">Year</label>
+        <input type="text" id="inv_year" name="inv_year"  pattern="\d{4}" required placeholder="4 digit year">
+        <label for="inv_description">Description</label>
+        <input type="text" id="inv_description" name="inv_description" required placeholder="Describe Condition">
+        <label for="inv_image">Image</label>
+        <input type="text" id="inv_image" name="inv_image" required placeholder="Vehicle Image">
+        <label for="inv_thumbnail">Thumbnail</label>
+        <input type="text" id="inv_thumbnail" name="inv_thumbnail" required placeholder="Picture Thumbnail">
+        <label for="inv_price">Price</label>
+        <input type="number" id="inv_price" name="inv_price" required placeholder="whole number" >
+        <label for="inv_miles">Miles</label>
+        <input type="number" id="inv_miles" name="inv_miles" required placeholder="no commas">
+        <label for="inv_color">Color</label>
+        <input type="text" id="inv_color" name="inv_color" required placeholder="Vehicle Color">
+        <label for="classificationList">Classification ID</label>
+        <input type="number" name="classification_id" id="classification_id" required placeholder="Select a classification 1-5">
         <button type="submit">Add Vehicle</button>
     </fieldset>
 </form>

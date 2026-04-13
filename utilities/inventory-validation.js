@@ -8,9 +8,9 @@ const validate = {}
   * ********************************** */
  validate.classificationRules = () => {
     return [
-        body("classification-name")
+        body("classification_name")
         .trim()
-        .notEmpty()
+        .notEmpty().withMessage("Classification name is required").bail()
         .matches(/^[a-zA-Z0-9]+$/)
         .withMessage("Classification name cannot contain spaces or special characters"),
     ]
@@ -47,7 +47,7 @@ const validate = {}
         body("inv_image")
         .trim()
         .notEmpty()
-        .withMessage("Please provide image ofthe vehicle"),
+        .withMessage("Please provide image of the vehicle"),
 
         body("inv_thumbnail")
         .trim()
@@ -64,14 +64,14 @@ const validate = {}
         .trim()
         .notEmpty()
         .withMessage("Please provide vehicle miles")
-        .isNumeric,
+        .isNumeric(),
 
         body("inv_color")
         .trim()
         .notEmpty()
         .withMessage("Please provide vehicle color"),
 
-        body("classificatio_id")
+        body("classification_id")
         .notEmpty()
         .withMessage("Please select classification")
         .isNumeric()
@@ -107,7 +107,6 @@ validate.checkInventory = async (req, res, next) => {
     return next()
   }
   let nav
-  utilities = require("./index")
   nav = await utilities.getNav()
   const classificationList = await utilities.buildClassificationList(req.body.classification_id)
   return res.render("inventory/add-inventory", {
